@@ -1,0 +1,3 @@
+#!/bin/sh
+docker-gen -watch -only-exposed -notify "sh dnsmasq-reload &" /etc/addresses.tmpl /etc/dnsmasq.d/01-addresses.conf &
+dnsmasq --no-daemon --dns-forward-max=250

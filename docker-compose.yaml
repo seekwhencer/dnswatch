@@ -1,0 +1,20 @@
+version: '3.0'
+
+services:
+  dnswatch:
+    restart: always
+    build: .
+    container_name: dnswatch
+    #cap_add:
+    #  - NET_ADMIN
+    ports:
+      - 54:54/tcp
+      - 54:54/udp
+    networks:
+      - default
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./dnsmasq/dnsmasq.conf:/etc/dnsmasq.conf
+      - ./dnsmasq/resolv.conf.head:/etc/resolv.conf.head
+      - ./dnsmasq/d:/etc/dnsmasq.d:rw
+

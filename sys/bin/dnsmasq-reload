@@ -1,0 +1,4 @@
+#!/bin/sh
+chmod 777 /etc/dnsmasq.d/01-addresses.conf
+killall dnsmasq
+dnsmasq --no-daemon --dns-forward-max=250 &
