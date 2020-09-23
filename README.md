@@ -39,7 +39,8 @@ DNSStubListener=no
 > **192.168.178.1** is my local fritz-box internet gateway  
 > **192.168.178.20** is the ip of the host machine
 
-- stopping and disabling `system-resolved`
+
+- **OR** stopping and disabling `system-resolved`
 
 ```
 sudo systemctl disable systemd-resolved
