@@ -8,8 +8,8 @@ services:
     #cap_add:
     #  - NET_ADMIN
     ports:
-      - 54:54/tcp
-      - 54:54/udp
+      - 53:53/tcp
+      - 53:53/udp
     networks:
       - default
     volumes:
