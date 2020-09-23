@@ -1,4 +1,4 @@
-#dnswatch
+# dnswatch
 
 - `dnsmasq` in a docker container
 - for local network use, not for production
